@@ -1,182 +1,186 @@
-# 🍼 Baby Name Tinder
+# 🍼 Baby Name Tinder - 宝宝名字探索应用
 
-A modern iOS app that gamifies the baby naming process with a Tinder-style swipe interface. Perfect for couples and families to collaboratively find the perfect name for their little one!
-
-## 📱 Features
-
-### Core Experience
-- **Swipe Interface**: Intuitive Tinder-style card swiping for browsing baby names
-- **Name Details**: View name meanings, origins, and pronunciations
-- **Audio Pronunciation**: Hear how each name is pronounced
-- **Gender Filtering**: Browse names by gender preference
-
-### Collaboration
-- **Family Circles**: Create or join a family circle to share preferences
-- **Match Detection**: Automatically identify names both partners like
-- **Real-time Sync**: Changes sync instantly across family members
-
-### Premium Features
-- **Unlimited Swipes**: Free users get 50 names per day, Premium removes limits
-- **Advanced Filters**: Filter by origin, culture, and popularity
-- **Undo Swipes**: Changed your mind? Undo your last swipe
-- **Ad-Free Experience**: Premium users enjoy an ad-free interface
-
-## 🎨 Design
-
-The app features a warm, modern aesthetic with:
-- **Color Palette**: Oatmeal, Sage, Terracotta, Mustard, and Deep Ocean
-- **Glassmorphism Effects**: Modern, translucent card designs
-- **Smooth Animations**: Delightful interactions and transitions
-- **Accessibility**: Full VoiceOver support and dynamic type
-
-## 🏗️ Tech Stack
-
-- **Platform**: iOS 16+
-- **Language**: Swift 5.9+
-- **UI Framework**: SwiftUI
-- **Architecture**: MVVM (Model-View-ViewModel)
-- **Backend**: Firebase (Authentication, Firestore, Analytics)
-- **Monetization**: StoreKit 2 (In-App Purchases)
-
-## 📂 Project Structure
-
-```
-BabyNameTinder/
-├── Models/              # Data models (BabyName, UserProfile, FamilyCircle)
-├── Views/              # SwiftUI views
-│   ├── Onboarding/    # Onboarding flow
-│   ├── Main/          # Main app interface
-│   ├── Swiping/       # Card stack and swipe UI
-│   └── Matches/       # Matched names view
-├── ViewModels/         # Business logic and state management
-├── Services/          # Firebase, Audio, Subscription services
-├── Theme/             # Colors, typography, constants
-└── Resources/         # Assets, localization, data files
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-- macOS 13.0 or later
-- Xcode 15.0 or later
-- CocoaPods or Swift Package Manager
-- Firebase account (for backend services)
-
-### Setup Instructions
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/shizhangfan/BABY_NAME_TINDER.git
-   cd BABY_NAME_TINDER
-   ```
-
-2. **Open the project:**
-   - The Xcode project is in `BabyNameTinderCode/BabyNameTinder/`
-   - See [NEXT_STEPS.md](NEXT_STEPS.md) for detailed setup if the project doesn't exist yet
-
-3. **Install dependencies:**
-   - Firebase SDK is managed via Swift Package Manager
-   - Xcode will automatically fetch dependencies on first build
-
-4. **Configure Firebase:**
-   - Create a Firebase project at [console.firebase.google.com](https://console.firebase.google.com)
-   - Add an iOS app with your bundle identifier
-   - Download `GoogleService-Info.plist`
-   - Add it to the Xcode project root
-
-5. **Build and run:**
-   - Select a simulator or device
-   - Press `⌘R` to build and run
-
-## 📋 Development Status
-
-Current development phase: **Phase 1 - Foundation & Architecture**
-
-For detailed task tracking, see:
-- [TODO.md](TODO.md) - Main development roadmap
-- [TODO_NEXT_ROUND.md](TODO_NEXT_ROUND.md) - Upcoming features and improvements
-- [NEXT_STEPS.md](NEXT_STEPS.md) - Immediate action items
-
-## 🛠️ Development
-
-### Running the App
-```bash
-# Open in Xcode
-open BabyNameTinderCode/BabyNameTinder.xcodeproj
-
-# Or from command line (if project is set up)
-xcodebuild -project BabyNameTinderCode/BabyNameTinder.xcodeproj -scheme BabyNameTinder -destination 'platform=iOS Simulator,name=iPhone 15'
-```
-
-### Code Style
-- Follow Swift API Design Guidelines
-- One view/viewmodel per file
-- Use meaningful variable names
-- Document public interfaces
-- See [copilot-instructions.md](copilot-instructions.md) for detailed conventions
-
-### Testing
-```bash
-# Run tests from Xcode
-⌘U
-
-# Or from command line
-xcodebuild test -project BabyNameTinderCode/BabyNameTinder.xcodeproj -scheme BabyNameTinder -destination 'platform=iOS Simulator,name=iPhone 15'
-```
-
-## 📱 App Store
-
-**Status**: In Development
-
-Planned release timeline:
-- Beta Testing (TestFlight): TBD
-- App Store Submission: TBD
-- Public Launch: TBD
-
-## 🤝 Contributing
-
-This is currently a personal project, but suggestions and feedback are welcome! Feel free to:
-- Open issues for bugs or feature requests
-- Submit pull requests for improvements
-- Share your experience and ideas
-
-## 📄 License
-
-Copyright © 2024. All rights reserved.
-
-## 🙋 Support
-
-For questions or issues:
-- Create an issue in this repository
-- Check existing documentation in TODO files
-- Review the NEXT_STEPS guide
-
-## 🎯 Roadmap
-
-### Q1 2024
-- ✅ Planning and design completed
-- 🔄 Core architecture implementation
-- 📅 Basic swiping functionality
-- 📅 Firebase integration
-
-### Q2 2024
-- 📅 Family circle features
-- 📅 Match detection
-- 📅 Premium subscriptions
-- 📅 Beta testing
-
-### Q3 2024
-- 📅 Polish and optimization
-- 📅 App Store submission
-- 📅 Marketing materials
-- 📅 Public launch
-
-## 🌟 Acknowledgments
-
-- Design inspiration from modern dating apps
-- Name database compiled from public sources
-- Icons and assets created specifically for this project
+[English](#english-version) | [中文](#中文版本)
 
 ---
 
-**Made with ❤️ for expecting parents everywhere**
+## English Version
+
+### 📋 What to Do Next
+
+You have three important documents that will guide you through the next steps:
+
+1. **[QUICK_FIX_GUIDE.md](QUICK_FIX_GUIDE.md)** - ⚡ START HERE FIRST
+   - Fixes the HTTP 400 push error you're experiencing
+   - Removes large files causing the issue
+   - 5-minute fix to get you back on track
+
+2. **[REPOSITORY_SETUP_GUIDE.md](REPOSITORY_SETUP_GUIDE.md)** - 🔧 Repository Configuration
+   - How to set your GitHub repository to public
+   - Detailed troubleshooting for push errors
+   - Best practices for managing large files
+
+3. **[NEXT_STEPS.md](NEXT_STEPS.md)** - 🚀 Development Roadmap
+   - Prioritized list of what to build next
+   - Bug fixes that need immediate attention
+   - Features to add before App Store submission
+
+### 🎯 Your Immediate Action Plan
+
+**Step 1: Fix the Push Error (5 minutes)**
+```bash
+cd /Users/shizf/xcodeprojects/BABY_NAME_TINDER
+git rm --cached "Baby Name Tinder iOS App Design and Features.zip"
+git rm --cached "baby_name_tinder_ios_icons.zip"
+git rm --cached ".DS_Store"
+git pull origin copilot/set-repo-to-public
+git commit -m "Remove large files from repository"
+git push origin main
+```
+
+**Step 2: Set Repository to Public (2 minutes)**
+1. Go to https://github.com/shizhangfan/BABY_NAME_TINDER/settings
+2. Scroll to "Danger Zone"
+3. Click "Change repository visibility" → "Make public"
+4. Confirm by typing the repository name
+
+**Step 3: Start Development (Today)**
+- Open `NEXT_STEPS.md` to see your prioritized task list
+- Fix the swipe limit bug (easiest first task)
+- Add haptic feedback (quick polish)
+
+### 📂 Project Status
+
+✅ **Completed (Phases 1-4)**
+- MVVM Architecture with Theme System
+- Firebase Integration
+- Card Swiping Interface
+- Match Detection
+- Family Circle Feature
+- Basic Monetization
+
+🔨 **In Progress (Phase 5)**
+- App Polish (haptics, animations)
+- StoreKit Integration
+- Bug Fixes
+
+📱 **Next Up**
+- App Store Preparation
+- User Preferences
+- Enhanced Onboarding
+
+### 📞 Need Help?
+
+If you encounter any issues:
+1. Check the guides in this repository
+2. All guides are bilingual (English/Chinese)
+3. Each guide has step-by-step instructions
+
+---
+
+## 中文版本
+
+### 📋 下一步做什么
+
+您有三个重要文档将指导您完成后续步骤：
+
+1. **[QUICK_FIX_GUIDE.md](QUICK_FIX_GUIDE.md)** - ⚡ 首先从这里开始
+   - 修复您遇到的 HTTP 400 推送错误
+   - 删除导致问题的大文件
+   - 5 分钟修复，让您回到正轨
+
+2. **[REPOSITORY_SETUP_GUIDE.md](REPOSITORY_SETUP_GUIDE.md)** - 🔧 仓库配置
+   - 如何将 GitHub 仓库设为公开
+   - 推送错误的详细故障排除
+   - 管理大文件的最佳实践
+
+3. **[NEXT_STEPS.md](NEXT_STEPS.md)** - 🚀 开发路线图
+   - 接下来要构建的优先级列表
+   - 需要立即关注的 Bug 修复
+   - App Store 提交前要添加的功能
+
+### 🎯 您的即时行动计划
+
+**步骤 1：修复推送错误（5 分钟）**
+```bash
+cd /Users/shizf/xcodeprojects/BABY_NAME_TINDER
+git rm --cached "Baby Name Tinder iOS App Design and Features.zip"
+git rm --cached "baby_name_tinder_ios_icons.zip"
+git rm --cached ".DS_Store"
+git pull origin copilot/set-repo-to-public
+git commit -m "从仓库中删除大文件"
+git push origin main
+```
+
+**步骤 2：将仓库设为公开（2 分钟）**
+1. 访问 https://github.com/shizhangfan/BABY_NAME_TINDER/settings
+2. 滚动到 "Danger Zone"（危险区域）
+3. 点击 "Change repository visibility"（更改仓库可见性）→ "Make public"（设为公开）
+4. 输入仓库名称确认
+
+**步骤 3：开始开发（今天）**
+- 打开 `NEXT_STEPS.md` 查看优先级任务列表
+- 修复滑动限制 bug（最简单的第一个任务）
+- 添加触觉反馈（快速优化）
+
+### 📂 项目状态
+
+✅ **已完成（第 1-4 阶段）**
+- MVVM 架构与主题系统
+- Firebase 集成
+- 卡片滑动界面
+- 匹配检测
+- 家庭圈功能
+- 基础货币化
+
+🔨 **进行中（第 5 阶段）**
+- 应用优化（触觉反馈、动画）
+- StoreKit 集成
+- Bug 修复
+
+📱 **即将进行**
+- App Store 准备
+- 用户偏好设置
+- 增强的引导流程
+
+### 📞 需要帮助？
+
+如果遇到任何问题：
+1. 查看此仓库中的指南
+2. 所有指南都是双语的（英文/中文）
+3. 每个指南都有分步说明
+
+---
+
+## 📝 Files in This Repository
+
+| File | Purpose | Language |
+|------|---------|----------|
+| `QUICK_FIX_GUIDE.md` | Fix HTTP 400 error immediately | 🇬🇧🇨🇳 |
+| `REPOSITORY_SETUP_GUIDE.md` | Configure GitHub repository | 🇬🇧🇨🇳 |
+| `NEXT_STEPS.md` | Development roadmap and tasks | 🇬🇧🇨🇳 |
+| `.gitignore` | Prevent large files from being tracked | - |
+| `TODO.md` | Original development plan | 🇬🇧 |
+| `TODO_NEXT_ROUND.md` | Detailed task breakdown | 🇬🇧 |
+
+---
+
+## 🎨 About Baby Name Tinder
+
+A Tinder-style iOS app for couples to discover and match on baby names together. Swipe right on names you love, and when both partners like the same name, it's a match!
+
+**Key Features:**
+- 👥 Family Circle - Connect with your partner
+- 💝 Match Detection - Find names you both love
+- 🎯 Daily Swipe Limits - Keep it fun and focused
+- 🗣️ Name Pronunciation - Hear how names sound
+- 💎 Premium Features - Unlimited swipes and more
+
+一款类似 Tinder 的 iOS 应用，让情侣们一起发现和匹配宝宝名字。向右滑动您喜欢的名字，当双方都喜欢同一个名字时，就是匹配！
+
+**主要功能：**
+- 👥 家庭圈 - 与您的伴侣连接
+- 💝 匹配检测 - 找到你们都喜欢的名字
+- 🎯 每日滑动限制 - 保持有趣和专注
+- 🗣️ 名字发音 - 听听名字的发音
+- 💎 高级功能 - 无限滑动等更多功能

@@ -1,9 +1,36 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## User settings
 xcuserdata/
+
+*.xcuserstate
+*.xcuserdatad
 
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
@@ -54,6 +81,7 @@ playground.xcworkspace
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
+
 Pods/
 #
 # Add this line if you want to avoid checking in source code from the Xcode workspace
@@ -89,16 +117,43 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-# macOS
-.DS_Store
+# Archives and compressed files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Large design files (optional - uncomment if you want to exclude)
+# *.sketch
+# *.fig
+# *.xd
+# *.psd
 
 # Temporary files
-*.swp
-*.swo
+*.tmp
+*.temp
 *~
+.*.swp
+.*.swo
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
 
 # Firebase
 GoogleService-Info.plist
+google-services.json
 
-# Archives and zip files (keep only original assets)
-*.zip
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
