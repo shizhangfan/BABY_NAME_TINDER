@@ -29,6 +29,9 @@ Temporary Items
 ## User settings
 xcuserdata/
 
+*.xcuserstate
+*.xcuserdatad
+
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
 *.xccheckout
@@ -78,7 +81,8 @@ playground.xcworkspace
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
-# Pods/
+
+Pods/
 #
 # Add this line if you want to avoid checking in source code from the Xcode workspace
 # *.xcworkspace
@@ -113,11 +117,43 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-# Zip files (to avoid large files)
+# Archives and compressed files
 *.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Large design files (optional - uncomment if you want to exclude)
+# *.sketch
+# *.fig
+# *.xd
+# *.psd
 
 # Temporary files
 *.tmp
 *.temp
-tmp/
-temp/
+*~
+.*.swp
+.*.swo
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Firebase
+GoogleService-Info.plist
+google-services.json
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
