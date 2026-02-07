@@ -59,7 +59,6 @@ The HTTP 400 error you encountered can be caused by several issues:
    
    # Build artifacts
    DerivedData/
-   *.xcworkspace
    
    # Dependencies
    Pods/
@@ -143,7 +142,6 @@ The HTTP 400 error you encountered can be caused by several issues:
    
    # 构建产物
    DerivedData/
-   *.xcworkspace
    
    # 依赖项
    Pods/
